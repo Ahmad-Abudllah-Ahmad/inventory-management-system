@@ -1,0 +1,344 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222.2 84% 4.9%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
+
+@layer components {
+  /* Loading Animation */
+  .loading-spinner {
+    @apply animate-spin rounded-full border-2 border-t-transparent;
+  }
+  
+  /* Card Hover Effects */
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  /* Gradient Backgrounds */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary)) 100%);
+  }
+  
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--secondary)) 0%, hsl(var(--accent)) 100%);
+  }
+  
+  /* Form Styles */
+  .form-input {
+    @apply flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  .form-label {
+    @apply text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70;
+  }
+  
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-primary;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/80 focus-visible:ring-secondary;
+  }
+  
+  .btn-destructive {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 focus-visible:ring-destructive;
+  }
+  
+  /* Dashboard Grid */
+  .dashboard-grid {
+    @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+  }
+  
+  .dashboard-grid-large {
+    @apply grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-3;
+  }
+  
+  /* Mobile POS Styles */
+  .pos-grid {
+    @apply grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4;
+  }
+  
+  .pos-button {
+    @apply aspect-square flex flex-col items-center justify-center space-y-2 rounded-lg border-2 border-dashed border-muted-foreground/25 bg-card p-4 text-center transition-all hover:border-primary hover:bg-primary/5 hover:text-primary;
+  }
+  
+  /* Status Badges */
+  .status-active {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400;
+  }
+  
+  .status-inactive {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400;
+  }
+  
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400;
+  }
+  
+  .status-completed {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400;
+  }
+  
+  /* Chart Containers */
+  .chart-container {
+    @apply h-[300px] w-full rounded-lg bg-card p-4;
+  }
+  
+  .chart-container-large {
+    @apply h-[400px] w-full rounded-lg bg-card p-6;
+  }
+  
+  /* Print Styles */
+  @media print {
+    .no-print,
+    .print\:hidden {
+      display: none !important;
+    }
+    
+    .print-only {
+      display: block !important;
+    }
+    
+    body, html, main, #__next, [class*="max-w-7xl"] {
+      color: black !important;
+      background: white !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    
+    .print-page {
+      page-break-after: always;
+      break-after: page;
+    }
+
+    .print-new-page {
+      page-break-before: always;
+      break-before: page;
+    }
+
+    .print-avoid-break {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* Prevent breaking inside cards, tables, lists, charts */
+    .card, 
+    [class*="rounded-xl"], 
+    [class*="shadow-sm"],
+    table, 
+    tr, 
+    thead,
+    tbody,
+    canvas, 
+    svg,
+    .chart-container,
+    .chart-container-large {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* Standardise grid layouts to clean blocks on print to avoid squeeze */
+    .grid {
+      display: block !important;
+    }
+
+    .grid > * {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin-bottom: 2rem !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* Dashboard overview small cards grid */
+    .grid.md\:grid-cols-2.lg\:grid-cols-4 {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+      gap: 1rem !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .grid.md\:grid-cols-2.lg\:grid-cols-4 > * {
+      margin-bottom: 0 !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    /* Ensure no text cut-off or clipping on print */
+    p, span, h1, h2, h3, h4, h5, h6, td, th {
+      word-break: break-word !important;
+      white-space: normal !important;
+    }
+
+    /* Prevent horizontal overflow on tables and charts */
+    table, tr, td, th, img, svg, canvas {
+      max-width: 100% !important;
+      box-sizing: border-box !important;
+    }
+
+    /* Print table layout overrides - smaller fonts and padding to prevent cutoffs */
+    table {
+      width: 100% !important;
+      border-collapse: collapse !important;
+    }
+
+    table th, 
+    table td, 
+    table span, 
+    table p, 
+    table div, 
+    table badge,
+    table .badge {
+      font-size: 8px !important;
+    }
+
+    table th, 
+    table td {
+      padding: 3px 4px !important;
+      border-bottom: 1px solid #e2e8f0 !important;
+    }
+  }
+  
+  /* Mobile Responsive */
+  @media (max-width: 768px) {
+    .mobile-stack {
+      @apply flex-col space-x-0 space-y-4;
+    }
+    
+    .mobile-full {
+      @apply w-full;
+    }
+    
+    .mobile-text-sm {
+      @apply text-sm;
+    }
+  }
+  
+  /* Animation Classes */
+  .fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  .slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  
+  /* Error and Success States */
+  .error-state {
+    @apply border-destructive/50 bg-destructive/10 text-destructive;
+  }
+  
+  .success-state {
+    @apply border-green-500/50 bg-green-500/10 text-green-700 dark:text-green-400;
+  }
+  
+  /* Loading States */
+  .skeleton {
+    @apply animate-pulse bg-muted rounded;
+  }
+  
+  .pulse-dot {
+    @apply animate-pulse-dot bg-primary rounded-full;
+  }
+}
