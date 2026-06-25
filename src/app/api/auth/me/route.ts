@@ -19,7 +19,7 @@ export async function GET(request: NextRequest) {
           id: 'admin-001',
           name: 'Administrator',
           username: 'admin',
-          email: 'admin@alumermobile.com',
+          email: 'admin@alumergrocery.com',
           role: 'SUPER_ADMIN',
           isActive: true,
           createdAt: new Date(),

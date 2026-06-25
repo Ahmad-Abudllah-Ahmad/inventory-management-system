@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Checkbox } from '@/components/ui/checkbox'
-import { Loader2, Eye, EyeOff, Smartphone, ShieldCheck } from 'lucide-react'
+import { Loader2, Eye, EyeOff, Store, ShieldCheck } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import toast from 'react-hot-toast'
 
@@ -71,9 +71,9 @@ export default function LoginPage() {
         {/* Logo and Branding */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4">
-            <Smartphone className="w-8 h-8" />
+            <Store className="w-8 h-8" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Al Umer Mobile</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Al Umer Grocery</h1>
           <p className="text-gray-600">Inventory & POS Management System</p>
         </div>
 

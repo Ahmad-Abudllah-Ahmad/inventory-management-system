@@ -17,7 +17,7 @@ import {
   Settings,
   ChevronLeft,
   ChevronRight,
-  Smartphone,
+  Store,
   Package2,
   CreditCard,
   BarChart3,
@@ -26,7 +26,9 @@ import {
   AlertTriangle,
   LogOut,
   Menu,
-  X
+  X,
+  ChevronDown,
+  UserRound
 } from 'lucide-react'
 
 const navigation = [
@@ -136,11 +138,11 @@ export function Sidebar() {
           className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center cursor-pointer" 
           onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
         >
-          <Smartphone className="w-5 h-5 text-white" />
+          <Store className="w-5 h-5 text-white" />
         </div>
         {!sidebarCollapsed && (
           <div>
-            <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Al Umer Mobile</h1>
+            <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Al Umer Grocery</h1>
             <p className="text-xs text-gray-500 dark:text-gray-400">Inventory & POS</p>
           </div>
         )}
@@ -275,10 +277,10 @@ export function Sidebar() {
         <div className="flex items-center justify-between p-4 border-b border-border">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Smartphone className="w-5 h-5 text-white" />
+              <Store className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-gray-900">Al Umer Mobile</h1>
+              <h1 className="text-lg font-semibold text-gray-900">Al Umer Grocery</h1>
               <p className="text-xs text-gray-500">Inventory & POS</p>
             </div>
           </div>

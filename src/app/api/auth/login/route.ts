@@ -18,13 +18,13 @@ export async function POST(request: NextRequest) {
     
     // TEMPORARY: Hardcoded admin credentials for testing (bypasses database)
     const adminCredentials = {
-      email: 'admin@alumermobile.com',
+      email: 'admin@alumergrocery.com',
       password: 'admin123',
       user: {
         id: 'admin-001',
         name: 'Administrator',
         username: 'admin',
-        email: 'admin@alumermobile.com',
+        email: 'admin@alumergrocery.com',
         role: 'SUPER_ADMIN',
         isActive: true,
         createdAt: new Date(),
@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
     } catch (dbError) {
       // Database not available, return admin-only message
       return NextResponse.json(
-        { error: 'Use admin credentials: admin@alumermobile.com / admin123' },
+        { error: 'Use admin credentials: admin@alumergrocery.com / admin123' },
         { status: 401 }
       )
     }

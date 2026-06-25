@@ -31,11 +31,11 @@ export default function SettingsPage() {
 
   // Mock settings data
   const [businessSettings, setBusinessSettings] = useState({
-    name: 'Al Umer Mobile',
+    name: 'Al Umer Grocery',
     address: 'Lahore, Pakistan',
     phone: '+92-XXX-XXXXXXX',
-    email: 'info@alumermobile.com',
-    website: 'www.alumermobile.com',
+    email: 'info@alumergrocery.com',
+    website: 'www.alumergrocery.com',
     taxRate: 17,
     currency: 'PKR',
     timezone: 'Asia/Karachi'

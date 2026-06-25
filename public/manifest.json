@@ -1,7 +1,7 @@
 {
-  "name": "Al Umer Mobile - Inventory & POS Management System",
-  "short_name": "Al Umer Mobile",
-  "description": "Comprehensive mobile accessories inventory and Point of Sale management system with AI-powered analytics, real-time reporting, and WhatsApp integration.",
+  "name": "Al Umer Grocery - Inventory & POS Management System",
+  "short_name": "Al Umer Grocery",
+  "description": "Comprehensive grocery inventory and Point of Sale management system with AI-powered analytics, real-time reporting, and WhatsApp integration.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

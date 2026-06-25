@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from '@/components/ui/card'
 import { Checkbox } from '@/components/ui/checkbox'
-import { Smartphone, ShieldCheck, Loader2, Eye, EyeOff, UserPlus } from 'lucide-react'
+import { Store, ShieldCheck, Loader2, Eye, EyeOff, UserPlus } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 export default function RegisterPage() {
@@ -113,9 +113,9 @@ export default function RegisterPage() {
         {/* Logo and Branding */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4">
-            <Smartphone className="w-8 h-8" />
+            <Store className="w-8 h-8" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Al Umer Mobile</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-2">Al Umer Grocery</h1>
           <p className="text-gray-600">Inventory & POS Management System</p>
         </div>
 
@@ -123,7 +123,7 @@ export default function RegisterPage() {
           <CardHeader className="space-y-1 pb-6">
             <CardTitle className="text-2xl font-semibold text-center">Create Account</CardTitle>
             <CardDescription className="text-center">
-              Join Al Umer Mobile to get started
+              Join Al Umer Grocery to get started
             </CardDescription>
           </CardHeader>
           

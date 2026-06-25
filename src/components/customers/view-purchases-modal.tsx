@@ -78,8 +78,8 @@ export function ViewPurchasesModal({ isOpen, onClose, customer }: ViewPurchasesM
           <body>
             <div class="header">
               <div>
-                <h1 style="margin: 0; color: #2563eb;">Al Umer Mobile</h1>
-                <p style="margin: 4px 0 0 0; color: #4b5563;">Mobile Accessories & Repairs</p>
+                <h1 style="margin: 0; color: #2563eb;">Al Umer Grocery</h1>
+                <p style="margin: 4px 0 0 0; color: #4b5563;">Grocery & Daily Needs Store</p>
               </div>
               <div style="text-align: right;">
                 <h2 style="margin: 0;">INVOICE</h2>

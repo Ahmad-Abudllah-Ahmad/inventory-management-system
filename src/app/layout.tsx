@@ -7,12 +7,12 @@ import { Toaster } from 'react-hot-toast'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Al Umer Mobile - Inventory & POS Management System',
-  description: 'Comprehensive mobile accessories inventory and Point of Sale management system with AI-powered analytics, real-time reporting, and WhatsApp integration.',
-  keywords: ['inventory management', 'POS system', 'mobile accessories', 'AI analytics', 'business management'],
+  title: 'Al Umer Grocery - Inventory & POS Management System',
+  description: 'Comprehensive grocery inventory and Point of Sale management system with AI-powered analytics, real-time reporting, and WhatsApp integration.',
+  keywords: ['inventory management', 'POS system', 'grocery store', 'AI analytics', 'business management'],
   authors: [{ name: 'Ahmad the AI Dev' }],
   creator: 'Ahmad the AI Dev',
-  publisher: 'Al Umer Mobile',
+  publisher: 'Al Umer Grocery',
   formatDetection: {
     email: false,
     address: false,

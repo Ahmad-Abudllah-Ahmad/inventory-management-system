@@ -8,7 +8,7 @@ async function main() {
       update: {},
       create: {
         id: 'admin-001',
-        email: 'admin@alumermobile.com',
+        email: 'admin@alumergrocery.com',
         username: 'admin',
         password: 'hashed-password',
         firstName: 'Admin',

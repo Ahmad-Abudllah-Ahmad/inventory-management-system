@@ -142,8 +142,8 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
           <body>
             <div class="header">
               <div>
-                <div class="title">AL UMER MOBILE</div>
-                <div style="font-size: 14px; color: #6b7280; margin-top: 4px;">Premium Mobile & Accessories Store</div>
+                <div class="title">AL UMER GROCERY</div>
+                <div style="font-size: 14px; color: #6b7280; margin-top: 4px;">Premium Grocery & Daily Needs Store</div>
               </div>
               <div class="meta">
                 <div style="font-weight: bold; font-size: 16px;">INVOICE</div>
@@ -226,7 +226,7 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
             </div>
 
             <div class="footer">
-              <p>Thank you for shopping at Al Umer Mobile!</p>
+              <p>Thank you for shopping at Al Umer Grocery!</p>
               <p style="font-size: 10px; margin-top: 8px;">Software Generated Invoice • No signature required</p>
             </div>
           </body>
@@ -261,8 +261,8 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
         <div className="p-6 overflow-y-auto flex-1 text-gray-800 dark:text-gray-200 animate-fade-in" id="invoice-print-area">
           <div className="flex justify-between items-start border-b pb-4 mb-4">
             <div>
-              <h2 className="text-xl font-extrabold text-blue-600 font-sans">AL UMER MOBILE</h2>
-              <p className="text-xs text-gray-500 mt-1">Premium Mobile & Accessories Store</p>
+              <h2 className="text-xl font-extrabold text-blue-600 font-sans">AL UMER GROCERY</h2>
+              <p className="text-xs text-gray-500 mt-1">Premium Grocery & Daily Needs Store</p>
             </div>
             <div className="text-right flex flex-col items-end gap-1">
               <span className="inline-block px-3 py-1 bg-green-100 text-green-800 text-xs font-bold rounded-full uppercase tracking-wider font-semibold">

@@ -137,7 +137,7 @@ export async function authenticate(request: NextRequest): Promise<AuthUser | nul
   if (token.startsWith('admin-session-')) {
     return {
       id: 'admin-001',
-      email: 'admin@alumermobile.com',
+      email: 'admin@alumergrocery.com',
       username: 'admin',
       firstName: 'Administrator',
       lastName: '',
