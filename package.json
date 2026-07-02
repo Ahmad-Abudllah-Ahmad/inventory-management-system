@@ -5,9 +5,9 @@
   "description": "Al Umer Grocery - Comprehensive Inventory & POS Management System",
   "author": "Ahmad the AI Dev",
   "scripts": {
-    "dev": "next dev",
-    "build": "prisma generate && next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && prisma generate && next build",
+    "start": "node init && next start",
     "lint": "next lint",
     "type-check": "tsc --noEmit",
     "db:generate": "prisma generate",

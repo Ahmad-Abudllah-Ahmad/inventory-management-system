@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Oswald } from 'next/font/google'
+const oswald = Oswald({ subsets: ['latin'], weight: ['200', '700'] })
 import { usePOSStore } from '@/store/pos-store'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -1016,7 +1018,7 @@ export default function POSPage() {
                 <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mx-auto mb-1">
                   <ShoppingCart className="w-6 h-6 text-white" />
                 </div>
-                <h2 className="font-bold text-sm uppercase">Al Umer Mobile Store</h2>
+                <h2 className={`text-lg uppercase ${oswald.className}`} style={{ fontWeight: 200, textTransform: 'none' }}>fourty<span style={{ fontWeight: 700 }}>1</span></h2>
                 <p className="text-[10px] text-gray-500">Hall Road, Lahore, Pakistan</p>
                 <p className="text-[10px] text-gray-500">Tel: +92-300-9876543</p>
               </div>
@@ -1104,7 +1106,7 @@ export default function POSPage() {
               </div>
 
               <div className="text-center pt-4 border-t border-dashed border-gray-300 text-[10px] text-gray-500 italic">
-                <p>Thank you for shopping at Al Umer Mobile!</p>
+                <p>Thank you for shopping at fourty1!</p>
                 <p>No exchange/refund without invoice receipt.</p>
               </div>
             </div>

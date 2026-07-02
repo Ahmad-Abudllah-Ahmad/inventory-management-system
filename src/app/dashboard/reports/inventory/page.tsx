@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Oswald } from 'next/font/google'
+const oswald = Oswald({ subsets: ['latin'], weight: ['200', '700'] })
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -91,7 +93,7 @@ export default function InventoryReportPage() {
       <div className="hidden print:block border-b-2 border-gray-200 pb-4 mb-6">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">AL UMER MOBILE</h1>
+            <h1 className={`text-2xl text-gray-900 ${oswald.className}`} style={{ fontWeight: 200, textTransform: 'none' }}>fourty<span style={{ fontWeight: 700 }}>1</span></h1>
             <p className="text-xs text-muted-foreground mt-0.5">Premium Mobile & Accessories Store</p>
           </div>
           <div className="text-right">

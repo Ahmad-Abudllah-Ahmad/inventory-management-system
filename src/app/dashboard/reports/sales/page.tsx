@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { Oswald } from 'next/font/google'
+const oswald = Oswald({ subsets: ['latin'], weight: ['200', '700'] })
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
@@ -128,7 +130,7 @@ export default function SalesReportPage() {
       <div className="hidden print:block border-b-2 border-gray-200 pb-4 mb-6">
         <div className="flex justify-between items-center">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">AL UMER MOBILE</h1>
+            <h1 className={`text-2xl text-gray-900 ${oswald.className}`} style={{ fontWeight: 200, textTransform: 'none' }}>fourty<span style={{ fontWeight: 700 }}>1</span></h1>
             <p className="text-xs text-muted-foreground mt-0.5">Premium Mobile & Accessories Store</p>
           </div>
           <div className="text-right">
@@ -575,6 +577,7 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
         <html>
           <head>
             <title>Invoice - ${order.id}</title>
+            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap" rel="stylesheet">
             <style>
               body {
                 font-family: system-ui, -apple-system, sans-serif;
@@ -663,7 +666,7 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
           <body>
             <div class="header">
               <div>
-                <div class="title">AL UMER MOBILE</div>
+                <div class="title" style="font-family: 'Oswald', sans-serif; font-weight: 200; text-transform: none;">fourty<span style="font-weight: 700;">1</span></div>
                 <div style="font-size: 14px; color: #6b7280; margin-top: 4px;">Premium Mobile & Accessories Store</div>
               </div>
               <div class="meta">
@@ -747,7 +750,7 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
             </div>
 
             <div class="footer">
-              <p>Thank you for shopping at Al Umer Mobile!</p>
+              <p>Thank you for shopping at fourty1!</p>
               <p style="font-size: 10px; margin-top: 8px;">Software Generated Invoice • No signature required</p>
             </div>
           </body>
@@ -782,7 +785,7 @@ function InvoicePreviewModal({ isOpen, onClose, order }: InvoicePreviewModalProp
         <div className="p-6 overflow-y-auto flex-1" id="invoice-print-area">
           <div className="flex justify-between items-start border-b pb-4 mb-4">
             <div>
-              <h2 className="text-xl font-extrabold text-blue-600 font-sans">AL UMER MOBILE</h2>
+              <h2 className={`text-xl text-blue-600 ${oswald.className}`} style={{ fontWeight: 200, textTransform: 'none' }}>fourty<span style={{ fontWeight: 700 }}>1</span></h2>
               <p className="text-xs text-gray-500 mt-1">Premium Mobile & Accessories Store</p>
             </div>
             <div className="text-right flex flex-col items-end gap-1">

@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { Oswald } from 'next/font/google'
+const oswald = Oswald({ subsets: ['latin'], weight: ['200', '700'] })
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useAuth } from '@/components/providers/auth-provider'
@@ -115,7 +117,7 @@ export default function RegisterPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4">
             <Store className="w-8 h-8" />
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Al Umer Grocery</h1>
+          <h1 className={cn("text-3xl text-gray-900 mb-2 font-extralight", oswald.className)}>fourty<span className="font-bold">1</span></h1>
           <p className="text-gray-600">Inventory & POS Management System</p>
         </div>
 

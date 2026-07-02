@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Local env files
-.env
 .env*.local
 
 # Vercel
@@ -34,7 +33,6 @@ yarn-error.log*
 next-env.d.ts
 
 # IDE
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -127,3 +125,4 @@ docker-compose.override.yml
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+config.bat

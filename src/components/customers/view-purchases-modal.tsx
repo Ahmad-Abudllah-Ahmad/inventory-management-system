@@ -66,6 +66,7 @@ export function ViewPurchasesModal({ isOpen, onClose, customer }: ViewPurchasesM
         <html>
           <head>
             <title>Invoice - ${sale.saleNumber}</title>
+            <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap" rel="stylesheet">
             <style>
               body { font-family: system-ui, -apple-system, sans-serif; color: #1f2937; padding: 40px; max-width: 800px; margin: 0 auto; }
               .header { display: flex; justify-content: space-between; border-bottom: 2px solid #e5e7eb; padding-bottom: 20px; }
@@ -78,7 +79,7 @@ export function ViewPurchasesModal({ isOpen, onClose, customer }: ViewPurchasesM
           <body>
             <div class="header">
               <div>
-                <h1 style="margin: 0; color: #2563eb;">Al Umer Grocery</h1>
+                <h1 style="margin: 0; color: #2563eb; font-family: 'Oswald', sans-serif; font-weight: 200;">fourty<span style="font-weight: 700;">1</span></h1>
                 <p style="margin: 4px 0 0 0; color: #4b5563;">Grocery & Daily Needs Store</p>
               </div>
               <div style="text-align: right;">

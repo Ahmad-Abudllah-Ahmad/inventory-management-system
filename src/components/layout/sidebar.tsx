@@ -1,6 +1,8 @@
 'use client'
 
 import { useEffect } from 'react'
+import { Oswald } from 'next/font/google'
+const oswald = Oswald({ subsets: ['latin'], weight: ['200', '700'] })
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useAuth } from '@/components/providers/auth-provider'
@@ -133,17 +135,14 @@ export function Sidebar() {
   return (
     <>
       {/* Brand Logo in the corner of the screen */}
-      <div className="fixed top-6 left-8 z-50 hidden lg:flex items-center space-x-2">
-        <div 
-          className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center cursor-pointer" 
-          onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
-        >
-          <Store className="w-5 h-5 text-white" />
-        </div>
+      <div 
+        className="fixed top-6 left-8 z-50 hidden lg:flex items-center cursor-pointer"
+        onClick={() => setSidebarCollapsed(!sidebarCollapsed)}
+      >
         {!sidebarCollapsed && (
           <div>
-            <h1 className="text-lg font-semibold text-gray-900 dark:text-white">Al Umer Grocery</h1>
-            <p className="text-xs text-gray-500 dark:text-gray-400">Inventory & POS</p>
+            <h1 className={cn("text-4xl text-gray-900 dark:text-white font-extralight", oswald.className)}>fourty<span className="font-bold">1</span></h1>
+            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Inventory & POS</p>
           </div>
         )}
       </div>
@@ -275,13 +274,10 @@ export function Sidebar() {
       >
         {/* Mobile Header */}
         <div className="flex items-center justify-between p-4 border-b border-border">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Store className="w-5 h-5 text-white" />
-            </div>
+          <div className="flex items-center">
             <div>
-              <h1 className="text-lg font-semibold text-gray-900">Al Umer Grocery</h1>
-              <p className="text-xs text-gray-500">Inventory & POS</p>
+              <h1 className={cn("text-4xl text-gray-900 font-extralight", oswald.className)}>fourty<span className="font-bold">1</span></h1>
+              <p className="text-sm text-gray-500 mt-1">Inventory & POS</p>
             </div>
           </div>
           
